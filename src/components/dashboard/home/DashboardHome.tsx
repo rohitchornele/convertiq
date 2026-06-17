@@ -1,120 +1,68 @@
-// 'use client';
-
-// import { useState } from 'react';
-
-// import ChatWindow from '../chat/ChatWindow';
-// import RecentConversations from '../chat/RecentConversations';
-
-// export default function DashboardHome() {
-//   const [selectedConversationId, setSelectedConversationId] = useState<
-//     string | null
-//   >(null);
-
-//   const [refreshKey, setRefreshKey] = useState(0);
-
-//   return (
-//     <div className="h-full grid grid-cols-12 gap-6">
-//       <div className="col-span-3">
-//         <RecentConversations
-//           key={refreshKey}
-//           onSelect={setSelectedConversationId}
-//         />
-//       </div>
-
-//       <div className="col-span-9">
-//         <ChatWindow
-//           conversationId={selectedConversationId}
-//           onConversationCreated={() => {
-//             setRefreshKey((prev) => prev + 1);
-//           }}
-//         />
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-// New Version, will delete old one later :
-
-
 'use client';
 
+import { useRouter } from 'next/navigation';
+
+import { ArrowRight, Sparkles } from 'lucide-react';
+
 import Greeting from './Greeting';
+
 import KPICards from './KPICards';
+
 import SuggestedActions from './SuggestedActions';
 
 export default function DashboardHome() {
+  const router = useRouter();
+
   return (
-    <div className="h-full overflow-hidden p-6 space-y-6">
+    <div className="h-full p-6 space-y-6 lg:overflow-hidden">
       <Greeting />
 
       <KPICards />
 
-      <div className="grid grid-cols-2 gap-6">
-        <div className="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6">
-          <div className="text-lg font-semibold text-[var(--text-primary)]">
-            Inbox Summary
-          </div>
+      {/* AI CTA */}
 
-          <div className="mt-6 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-[var(--text-secondary)]">Unread</span>
-
-              <span className="font-semibold text-[var(--text-primary)]">
-                12
-              </span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <span className="text-[var(--text-secondary)]">Priority</span>
-
-              <span className="font-semibold text-[var(--text-primary)]">
-                4
-              </span>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <span className="text-[var(--text-secondary)]">
-                Newsletters
-              </span>
-
-              <span className="font-semibold text-[var(--text-primary)]">
-                2
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-6">
-          <div className="text-lg font-semibold text-[var(--text-primary)]">
-            Upcoming Meetings
-          </div>
-
-          <div className="mt-6 space-y-6">
-            <div>
-              <div className="text-sm text-[var(--text-secondary)]">
-                Today · 5 PM
-              </div>
-
-              <div className="mt-1 font-semibold text-[var(--text-primary)]">
-                MOM Review
-              </div>
+      <button
+        onClick={() => router.push('/dashboard/chat')}
+        className="w-full text-left bg-[var(--card)] border border-[var(--border)] rounded-xl p-5 hover:border-white/15 hover:bg-white/[0.02] transition-all group"
+      >
+        <div className="flex items-start justify-between gap-6">
+          <div className="flex gap-4">
+            <div className="w-10 h-10 rounded-xl bg-white/[0.03] border border-[var(--border)] flex items-center justify-center text-[var(--accent)] shrink-0">
+              <Sparkles size={18} />
             </div>
 
             <div>
-              <div className="text-sm text-[var(--text-secondary)]">
-                Tomorrow · 11 AM
-              </div>
+              <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+                Let ConvertIQ handle your inbox
+              </h2>
 
-              <div className="mt-1 font-semibold text-[var(--text-primary)]">
-                Client Meeting
+              <p className="mt-1 text-sm text-[var(--text-secondary)] max-w-2xl">
+                Ask AI to summarize emails, draft replies, schedule meetings or
+                manage your calendar — all from a single chat.
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="text-xs px-3 py-1 rounded-full bg-white/[0.03] border border-[var(--border)]">
+                  Summarize Inbox
+                </span>
+
+                <span className="text-xs px-3 py-1 rounded-full bg-white/[0.03] border border-[var(--border)]">
+                  Draft Reply
+                </span>
+
+                <span className="text-xs px-3 py-1 rounded-full bg-white/[0.03] border border-[var(--border)]">
+                  Schedule Meeting
+                </span>
               </div>
             </div>
           </div>
+
+          <ArrowRight
+            size={20}
+            className="text-[var(--text-secondary)] group-hover:translate-x-1 transition-transform shrink-0 mt-1"
+          />
         </div>
-      </div>
+      </button>
 
       <SuggestedActions />
     </div>

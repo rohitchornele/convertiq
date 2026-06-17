@@ -35,20 +35,19 @@ export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
   };
 
   return (
-    <aside
-      className="h-full overflow-y-auto bg-[var(--sidebar)] border-r border-[var(--border)] transition-all duration-300"
-    >
+    <aside className="hidden md:flex flex-col h-full overflow-y-auto bg-[var(--sidebar)] border-r border-[var(--border)] transition-all duration-300">
       {/* Top Actions */}
 
       <div className="h-16 px-4 flex items-center justify-between">
         {!collapsed && (
-          <button className="flex-1 mr-3 px-4 py-2.5 rounded-xl bg-[var(--card)] border border-[var(--border)] text-sm font-medium hover:border-[var(--accent)] transition"
-          >
+          <button className="flex-1 mr-3 px-4 py-2.5 rounded-xl bg-[var(--card)] border border-[var(--border)] text-sm font-medium hover:border-[var(--accent)] transition">
             + New Chat
           </button>
         )}
 
-        <button onClick={onToggle} className="w-8 h-8 rounded-lg flex items-center justify-center text-[var(--text-secondary)] hover:bg-[var(--card)] transition"
+        <button
+          onClick={onToggle}
+          className="w-8 h-8 rounded-lg flex items-center justify-center text-[var(--text-secondary)] hover:bg-[var(--card)] transition"
         >
           {collapsed ? <ChevronsRight size={18} /> : <ChevronsLeft size={18} />}
         </button>
@@ -65,7 +64,9 @@ export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
               {/* Section Header */}
 
               {!collapsed && (
-                <button onClick={() => toggleSection(section.title)} className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)] hover:bg-[var(--card)] transition"
+                <button
+                  onClick={() => toggleSection(section.title)}
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)] hover:bg-[var(--card)] transition"
                 >
                   <span>{section.title}</span>
 
@@ -89,8 +90,10 @@ export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
                       pathname.startsWith(`${item.href}/`);
 
                     return (
-                      <Link key={item.label} href={item.href}
-					  className={`
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className={`
                           flex
                           items-center
                           gap-3

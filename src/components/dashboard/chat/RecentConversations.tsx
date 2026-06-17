@@ -30,7 +30,7 @@ export default function RecentConversations({
 
       const data = await response.json();
 
-    //   console.log('CONVERSATIONS =', data);
+      //   console.log('CONVERSATIONS =', data);
 
       setConversations(data);
     } catch (error) {
@@ -67,36 +67,26 @@ export default function RecentConversations({
   }
 
   return (
-    <div className="space-y-3">
-      <h2 className="text-sm font-semibold text-[var(--text-secondary)]">
-        Recent Conversations
-      </h2>
+    <div className="overflow-y-auto w-full h-full">
+      <div className="space-y-3 ">
+        <h2 className="text-sm font-semibold text-[var(--text-secondary)]">
+          Recent Conversations
+        </h2>
 
-      <div className="space-y-2">
-        {conversations.map((conversation) => (
-          <button
-            key={conversation.id}
-            onClick={() => onSelect?.(conversation.id)}
-            className="w-full
-                text-left
-                p-4
-                rounded-2xl
-                border
-                border-[var(--border)]
-                bg-[var(--card)]
-                hover:border-[var(--accent)]
-                transition
-              "
-          >
-            <div className="font-medium text-[var(--text-primary)]">
-              {conversation.title}
-            </div>
+        <div className="space-y-2">
+          {conversations.map((conversation) => (
+            <button className="group w-full text-start rounded-xl px-3 py-2 text-left transition-colors hover:bg-[var(--card)]">
+              <span className="truncate text-sm text-[var(--text-primary)]">
+                {conversation.title}
+              </span>
+              <br />
 
-            <div className="text-xs mt-1 text-[var(--text-secondary)]">
-              {new Date(conversation.updatedAt).toLocaleString()}
-            </div>
-          </button>
-        ))}
+              <span className="shrink-0 text-xs text-[var(--text-secondary)]">
+                {conversation.updatedAt}.
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
