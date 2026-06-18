@@ -9,13 +9,24 @@ import Greeting from './Greeting';
 import KPICards from './KPICards';
 
 import SuggestedActions from './SuggestedActions';
+import { useEffect, useState } from 'react';
+import { getCurrentUser } from '@/server/utils/user';
 
 export default function DashboardHome() {
   const router = useRouter();
 
+  const [user, setUser] = useState('');
+
+  useEffect(() => {
+    async function getUser() {
+      const response = await getCurrentUser();
+      setUser(response?.name ?? '');
+    }
+  }, []);
+
   return (
     <div className="h-full p-6 space-y-6 lg:overflow-hidden">
-      <Greeting />
+      <Greeting user={{ name: 'Rohit' }} />
 
       <KPICards />
 
