@@ -103,9 +103,9 @@ export default function DashboardNavbar({
 						<Menu size={20} />
 					</button>
 					<div className="text-xl font-bold tracking-tight cursor-pointer select-none">
-						Convert
+						Meetra
 						<span className="text-[var(--accent)]">
-							IQ
+							AI
 						</span>
 					</div>
 				</div>

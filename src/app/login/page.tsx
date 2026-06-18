@@ -20,10 +20,10 @@ export default async function LoginPage() {
       <div className="relative z-10 w-full max-w-md rounded-[24px] border border-[var(--color-border)] bg-[var(--color-card)] p-10 text-center shadow-[var(--shadow-float)]">
         {/* Logo */}
 
-        <h1 className="mb-3 text-4xl font-extrabold tracking-[-0.03em]">
-          Convert
+        <h1 className="mb-3 text-4xl font-extrabold tracking-[0.03em]">
+          Meetra
           <span className="text-[var(--color-accent)]">
-            IQ
+            AI
           </span>
         </h1>
 

@@ -43,13 +43,13 @@ export default function Footer() {
           className="
           font-extrabold
           text-lg
-          tracking-[-0.02em]
+          tracking-[0.02em]
           text-text
         "
         >
-          Convert
+          Meetra
           <span className="text-accent">
-            IQ
+            AI
           </span>
         </div>
         {/* Links */}

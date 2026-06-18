@@ -43,10 +43,10 @@ export default function MobileDrawer({
         {/* Header */}
 
         <div className="flex h-[var(--navbar-height)] items-center justify-between border-b border-[var(--border)] px-6">
-          <h1 className="text-xl font-bold tracking-tight">
-            Convert
+          <h1 className="text-xl font-bold tracking-normal">
+            Meetra
             <span className="text-[var(--accent)]">
-              IQ
+              AI
             </span>
           </h1>
 

@@ -20,9 +20,9 @@ export default function Navbar() {
 		<nav className="fixed top-0 left-0 right-0 z-50 h-16 px-[5vw] flex items-center justify-between backdrop-blur-xl border-b border-border bg-[var(--nav-blur)] transition-all duration-300"
 		>
 			{/* Logo */}
-			<div className="font-extrabold text-[1.15rem] tracking-[-0.02em]">
-				Convert
-				<span className="text-[var(--accent)]">IQ</span>
+			<div className="font-extrabold text-[1.15rem] tracking-[0.02em]">
+				Meetra
+				<span className="text-[var(--accent)]">AI</span>
 			</div>
 			{/* Nav Links */}
 			<div className="hidden md:flex items-center gap-8">
