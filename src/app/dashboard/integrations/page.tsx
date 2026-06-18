@@ -69,8 +69,8 @@ export default async function IntegrationsPage() {
 								connected={
 									integration.connected
 								}
-								connectUrl={`/api/connect?plugin=${integration.id}`}
-								disconnectUrl={`/api/disconnect?plugin=${integration.id}`}
+								connectUrl={`/api/integrations/connect?plugin=${integration.id}`}
+								disconnectUrl={`/api/integrations/disconnect?plugin=${integration.id}`}
 							/>
 						)
 					)
