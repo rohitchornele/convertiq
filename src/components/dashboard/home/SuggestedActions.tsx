@@ -73,7 +73,7 @@ export default function SuggestedActions() {
         </h2>
 
         <p className="text-xs text-[var(--text-secondary)] mt-1">
-          Popular things you can ask ConvertIQ
+          Popular things you can ask Meetra AI
         </p>
       </div>
 

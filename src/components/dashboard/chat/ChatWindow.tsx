@@ -245,7 +245,7 @@ export default function ChatWindow({
               What can I help you with?
             </h1>
             <p className="mt-3 text-lg text-[var(--text-secondary)]">
-              ConvertIQ can search emails, schedule meetings and manage your
+              Meetra AI can search emails, schedule meetings and manage your
               day.
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function ChatWindow({
       >
         <ChatInput
           onSubmit={handleSubmit}
-          placeholder="Ask ConvertIQ anything..."
+          placeholder="Ask Meetra AI anything..."
         />
       </div>
     </div>

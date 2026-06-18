@@ -45,7 +45,7 @@ export default async function IntegrationsPage() {
 					Integrations
 				</h1>
 				<p className="mt-3 text-[var(--text-secondary)]">
-					Connect Gmail and Google Calendar to let ConvertIQ manage your emails and meetings.
+					Connect Gmail and Google Calendar to let Meetra AI manage your emails and meetings.
 				</p>
 			</div>
 			{/* Cards */}

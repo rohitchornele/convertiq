@@ -44,7 +44,7 @@ export default function AIActions() {
                         AI Actions
                     </h2>
                     <p className="text-sm text-[var(--text-secondary)]">
-                        Let ConvertIQ manage your calendar.
+                        Let Meetra AI manage your calendar.
                     </p>
                 </div>
             </div>

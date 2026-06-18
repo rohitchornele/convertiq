@@ -7,7 +7,7 @@ interface ChatInputProps {
 }
 export default function ChatInput({
   onSubmit,
-  placeholder = 'Ask ConvertIQ anything...',
+  placeholder = 'Ask Meetra AI anything...',
 }: ChatInputProps) {
   const [message, setMessage] = useState('');
   

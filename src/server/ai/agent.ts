@@ -45,7 +45,7 @@ export async function chat(
   });
 
   const agent = new Agent({
-    name: 'convertiq-agent',
+    name: 'meetraai-agent',
 
     model: 'gpt-4.1-mini',
 

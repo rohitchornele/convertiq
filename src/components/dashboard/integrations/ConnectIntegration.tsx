@@ -13,7 +13,7 @@ interface ConnectIntegrationProps {
 export default function ConnectIntegration({
   title = 'No Integration Connected',
 
-  description = 'Connect Gmail or Google Calendar to start using ConvertIQ.',
+  description = 'Connect Gmail or Google Calendar to start using Meetra AI.',
 
   plugin,
 }: ConnectIntegrationProps) {

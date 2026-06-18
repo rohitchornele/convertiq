@@ -33,7 +33,7 @@ export default function DashboardHome() {
 
             <div>
               <h2 className="text-lg font-semibold text-[var(--text-primary)]">
-                Let ConvertIQ handle your inbox
+                Let Meetra AI handle your inbox
               </h2>
 
               <p className="mt-1 text-sm text-[var(--text-secondary)] max-w-2xl">

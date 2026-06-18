@@ -10,7 +10,7 @@ export async function summarizeEmail(body: string): Promise<EmailSummary> {
 
     instructions: `
 
-You are ConvertIQ.
+You are Meetra AI.
 
 Analyze the email.
 

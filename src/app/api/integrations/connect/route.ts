@@ -16,6 +16,8 @@ export async function GET(request: NextRequest) {
     }
 
     const plugin = new URL(request.url).searchParams.get('plugin');
+
+    console.log("plugin = ", plugin)
     if (!plugin) {
         return NextResponse.json({ error: 'Missing plugin param' }, { status: 400 });
     }
@@ -24,6 +26,8 @@ export async function GET(request: NextRequest) {
         tenantId,
         redirectUri: REDIRECT_URI,
     });
+
+    console.log("url = ", url)
 
     const response = NextResponse.redirect(url);
     response.cookies.set('oauth_state', state, {

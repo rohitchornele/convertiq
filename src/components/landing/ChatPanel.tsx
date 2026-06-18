@@ -60,7 +60,7 @@ export default function ChatPanel({
       {/* Header */}
       <div className="px-4 py-3 border-b border-border uppercase tracking-[0.06em] text-[0.72rem] font-bold text-text2"
       >
-        ConvertIQ Chat
+        Meetra AI Chat
       </div>
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4"

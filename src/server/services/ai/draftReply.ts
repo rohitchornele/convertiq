@@ -8,7 +8,7 @@ export async function draftReply(emailBody: string) {
 
     instructions: `
 
-You are ConvertIQ.
+You are Meetra AI.
 
 Draft a professional reply.
 

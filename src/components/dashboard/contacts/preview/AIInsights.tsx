@@ -36,7 +36,7 @@ export default function AIInsights({
 						AI Insights
 					</h2>
 					<p className="text-sm text-[var(--text-secondary)]">
-						What ConvertIQ remembers
+						What Meetra AI remembers
 					</p>
 				</div>
 			</div>

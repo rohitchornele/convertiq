@@ -2,12 +2,12 @@ services:
   postgresdb:
     image: postgres:15
     restart: unless-stopped
-    container_name: convertiq
+    container_name: meetraai
 
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: convertiq
+      POSTGRES_DB: meetraai
 
     ports:
       - "5432:5432"

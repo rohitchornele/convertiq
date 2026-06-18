@@ -85,7 +85,7 @@ export default function Footer() {
           text-center
         "
         >
-          © 2026 ConvertIQ. All rights reserved.
+          © 2026 Meetra AI. All rights reserved.
         </p>
       </div>
     </footer>

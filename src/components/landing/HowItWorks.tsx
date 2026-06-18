@@ -3,7 +3,7 @@ const steps = [
     number: "1",
     title: "Connect your accounts",
     description:
-      "Authorize Gmail and Google Calendar via secure OAuth. ConvertIQ never stores credentials.",
+      "Authorize Gmail and Google Calendar via secure OAuth. Meetra AI never stores credentials.",
   },
   {
     number: "2",
@@ -15,7 +15,7 @@ const steps = [
     number: "3",
     title: "AI handles the rest",
     description:
-      "ConvertIQ reads, writes, schedules, and summarizes — then confirms every action before committing.",
+      "Meetra AI reads, writes, schedules, and summarizes — then confirms every action before committing.",
   },
 ];
 export default function HowItWorks() {

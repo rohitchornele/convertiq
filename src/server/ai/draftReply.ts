@@ -7,7 +7,7 @@ export async function draftReply(emailBody: string) {
     model: 'gpt-4.1-mini',
 
     instructions: `
-You are ConvertIQ.
+You are Meetra AI.
 
 Draft a professional reply to the email.
 
