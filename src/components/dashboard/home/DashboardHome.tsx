@@ -15,18 +15,12 @@ import { getCurrentUser } from '@/server/utils/user';
 export default function DashboardHome() {
   const router = useRouter();
 
-  const [user, setUser] = useState('');
+  // const [user, setUser] = useState('');
 
-  useEffect(() => {
-    async function getUser() {
-      const response = await getCurrentUser();
-      setUser(response?.name ?? '');
-    }
-  }, []);
 
   return (
     <div className="h-full p-6 space-y-6 lg:overflow-hidden">
-      <Greeting user={{ name: 'Rohit' }} />
+      <Greeting />
 
       <KPICards />
 

@@ -1,7 +1,7 @@
 const footerLinks = [
   {
     name: "Privacy",
-    href: "#",
+    href: "/privacy",
   },
   {
     name: "Terms",
