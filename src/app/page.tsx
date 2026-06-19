@@ -7,6 +7,7 @@ import Navbar from "@/components/landing/Navbar";
 import Stats from "@/components/landing/Stats";
 import React from "react";
 
+
 const Homepage = () => {
 	return (
 		<main className="bg-bg text-text overflow-x-hidden min-h-screen">
@@ -35,3 +36,29 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+// export default function HomePage() {
+//   return (
+//     <>
+//       <Navbar />
+
+//       <main>
+//         <Hero />
+
+//         <ProblemSolution />
+
+//         <HowItWorks />
+
+//         <Features />
+
+//         <EarlyAccess />
+
+//         <FAQ />
+
+//         <CTA />
+//       </main>
+
+//       <Footer />
+//     </>
+//   );
+// }
