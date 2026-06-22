@@ -35,7 +35,7 @@ export default function RecentConversations({
 
       const data = await response.json();
 
-      setConversations(data);
+      setConversations(data.conversations);
     } catch (error) {
       console.error(error);
     } finally {
@@ -44,10 +44,14 @@ export default function RecentConversations({
   }
 
   const visibleConversations = useMemo(() => {
-    return conversations.slice(0, visibleCount);
+    return conversations?.slice(0, visibleCount);
   }, [conversations, visibleCount]);
 
-  const hasMore = conversations.length > visibleCount;
+  if(!conversations){
+    return null;
+  }
+
+  const hasMore = conversations?.length > visibleCount;
 
   if (loading) {
     return (

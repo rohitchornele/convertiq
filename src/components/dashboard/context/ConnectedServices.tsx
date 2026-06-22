@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { Mail, CalendarDays, ChevronRight } from 'lucide-react';
 
 export default function ConnectedServices() {
-  const [status, setStatus] = useState({
-    gmail: false,
-
-    googlecalendar: false,
-  });
+  const [status, setStatus] = useState({gmail: false, googlecalendar: false,});
 
   useEffect(() => {
     async function fetchStatus() {
@@ -19,6 +15,7 @@ export default function ConnectedServices() {
         const response = await fetch('/api/integrations/status');
 
         const data = await response.json();
+        console.log("data = ", data)
 
         setStatus(data);
       } catch (error) {
@@ -70,7 +67,7 @@ export default function ConnectedServices() {
               <CalendarDays size={20} className="text-[var(--accent)] mt-1" />
 
               <span
-                className={`absolute -right-1 -bottom-2 h-3 w-3 rounded-full ${status.gmail ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.9)]' : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.9)]'}`}
+                className={`absolute -right-1 -bottom-2 h-3 w-3 rounded-full ${status.googlecalendar ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.9)]' : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.9)]'}`}
               />
             </div>
 

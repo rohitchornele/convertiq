@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   ChevronsLeft,
   ChevronsRight,
@@ -20,11 +20,14 @@ interface SidebarProps {
 export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
   const pathname = usePathname();
 
+   const router = useRouter();
+
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     AI: true,
-    Communication: false,
-    Management: false,
-    Settings: false,
+    Communication: true,
+    Calendar: true,
+    People : true,
+    System: true,
   });
 
   const toggleSection = (title: string) => {
@@ -40,7 +43,7 @@ export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
 
       <div className="h-16 px-4 flex items-center justify-between">
         {!collapsed && (
-          <button className="flex-1 mr-3 px-4 py-2.5 rounded-xl bg-[var(--card)] border border-[var(--border)] text-sm font-medium hover:border-[var(--accent)] transition">
+          <button onClick={() => router.push('/dashboard/chat')} className="flex-1 mr-3 px-4 py-2.5 rounded-xl bg-[var(--card)] border border-[var(--border)] text-sm font-medium hover:border-[var(--accent)] transition">
             + New Chat
           </button>
         )}

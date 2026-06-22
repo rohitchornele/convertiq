@@ -11,7 +11,6 @@ export async function GET() {
     if (!tenantId) {
       return NextResponse.json({
         gmail: false,
-
         googlecalendar: false,
       });
     }
@@ -25,14 +24,12 @@ export async function GET() {
 
       isConnected(
         tenantId,
-
         'googlecalendar'
       ),
     ]);
 
     return NextResponse.json({
       gmail,
-
       googlecalendar,
     });
   } catch (error) {
